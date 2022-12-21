@@ -5,14 +5,12 @@ import "react-quill/dist/quill.snow.css"
 import "./styles.css"
 
 const NewBlogPost = (props) => {
-  const [authName, setAuthName] = useState("Stefano")
   const [blogPost, setBlogPost] = useState({
     category: "",
     title: "",
     text: "",
     author: {
       name: ""
-      // avatar: `https://ui-avatars.com/api/?name=${authName}`
     }
   })
 
