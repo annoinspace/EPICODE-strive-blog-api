@@ -17,26 +17,32 @@ const BlogList = () => {
   }, [])
 
   return (
-    <Row>
-      {blogs.map((blog, i) => (
-        <Col
-          key={i}
-          md={4}
-          style={{
-            marginBottom: 50
-          }}
-        >
-          <BlogItem
-            key={blog.id}
-            id={blog._id}
-            {...blog}
-            title={blog.title}
-            name={blog.author}
-            cover={blog.cover}
-          />
-        </Col>
-      ))}
-    </Row>
+    <>
+      {blogs.length !== 0 ? (
+        <Row>
+          {blogs.map((blog, i) => (
+            <Col
+              key={i}
+              md={4}
+              style={{
+                marginBottom: 50
+              }}
+            >
+              <BlogItem
+                {...blog}
+                key={blog.id}
+                id={blog._id}
+                title={blog.title}
+                name={blog.author}
+                cover={blog.cover}
+              />
+            </Col>
+          ))}
+        </Row>
+      ) : (
+        <div>no blogs available</div>
+      )}{" "}
+    </>
   )
 }
 
