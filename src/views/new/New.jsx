@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react"
+import React, { useState } from "react"
 import { Button, Container, Form } from "react-bootstrap"
 import ReactQuill from "react-quill"
 import "react-quill/dist/quill.snow.css"
@@ -45,6 +45,14 @@ const NewBlogPost = (props) => {
 
       if (response.ok) {
         console.log("article added")
+        setBlogPost({
+          category: "",
+          title: "",
+          text: "",
+          author: {
+            name: ""
+          }
+        })
       } else {
         console.log("error adding new article")
       }

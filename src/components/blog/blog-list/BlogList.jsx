@@ -14,7 +14,7 @@ const BlogList = () => {
   }
   useEffect(() => {
     fetchBlogs()
-  }, [])
+  }, [blogs.length])
 
   return (
     <>
@@ -30,6 +30,7 @@ const BlogList = () => {
             >
               <BlogItem
                 {...blog}
+                blog={blog}
                 key={blog.id}
                 id={blog._id}
                 title={blog.title}
