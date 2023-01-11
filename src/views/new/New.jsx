@@ -35,7 +35,7 @@ const NewBlogPost = (props) => {
     console.log("submitted")
 
     try {
-      let response = await fetch("http://localhost:3001/blogs/", {
+      let response = await fetch("http://localhost:3003/blogs/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
